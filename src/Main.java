@@ -45,5 +45,11 @@ public class Main {
         lista.mostrarLista();
         System.out.println();
         System.out.println("------------------------");
+
+        // buscar nodo
+        lista.buscarNodo(200);
+
+        System.out.println(lista.buscarNodo(100));
+        System.out.println("------------------------");
     }
 }
