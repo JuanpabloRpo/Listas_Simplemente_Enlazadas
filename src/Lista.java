@@ -16,11 +16,7 @@ public class Lista {
     }
 
     public boolean estaVacia(){
-        if(inicio==null){
-            return true;
-        }else {
-            return false;
-        }
+        return inicio == null;
     }
     // Metodo para agregar un nodo al inicio de la lista
     public void agregarAlInicio(int elemento){
@@ -64,6 +60,7 @@ public class Lista {
     public int eliminarAlFinal() {
         int elemento =fin.getDato();
 
+
         if (inicio == fin) {
             inicio = null;
             fin = null;
@@ -78,6 +75,39 @@ public class Lista {
         }
         return elemento;
 
+    }
+
+    //borrar un nodo especifico
+    public int borrarNodoEspecifico(int elemento){
+        if (!estaVacia()){
+            if (inicio==fin && elemento==inicio.getDato()){
+                inicio = null;
+                fin = null;
+            } else if (inicio.getDato()==elemento) {
+                inicio=inicio.getSiguiente();
+
+            }else {
+
+                Nodo anterior=inicio;
+                Nodo temporal=inicio.getSiguiente();
+
+                while (temporal!=null && temporal.getDato()!=elemento){
+                    anterior=anterior.getSiguiente();
+                    temporal=temporal.getSiguiente();
+                }
+
+                if (temporal!=null){
+                    anterior.setSiguiente(temporal.getSiguiente());
+
+                    if (temporal==fin){
+                        fin=anterior;
+                    }
+                }
+
+            }
+        }
+
+        return elemento;
     }
 
     public void mostrarLista(){

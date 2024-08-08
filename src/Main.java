@@ -6,6 +6,8 @@ public class Main {
         lista.agregarAlInicio(2);
         lista.agregarAlInicio(7);
         lista.agregarAlInicio(10);
+        lista.agregarAlInicio(4);
+        lista.agregarAlInicio(50);
 
         lista.mostrarLista();
         System.out.println();
@@ -15,6 +17,9 @@ public class Main {
         lista.agregarAlFinal(8);
         lista.agregarAlFinal(46);
         lista.agregarAlFinal(3);
+        lista.agregarAlFinal(45);
+        lista.agregarAlFinal(87);
+
 
         lista.mostrarLista();
         System.out.println();
@@ -29,6 +34,13 @@ public class Main {
 
         // eliminar al final
         lista.eliminarAlFinal();
+
+        lista.mostrarLista();
+        System.out.println();
+        System.out.println("------------------------");
+
+        // eliminal nodo especifico
+        lista.borrarNodoEspecifico(10);
 
         lista.mostrarLista();
         System.out.println();
