@@ -78,7 +78,7 @@ public class Lista {
     }
 
     // Borrar un nodo especifico
-    public int borrarNodoEspecifico(int elemento){
+    public void borrarNodoEspecifico(int elemento){
         if (!estaVacia()){
             if (inicio==fin && elemento==inicio.getDato()){
                 inicio = null;
@@ -98,16 +98,14 @@ public class Lista {
 
                 if (temporal!=null){
                     anterior.setSiguiente(temporal.getSiguiente());
-
                     if (temporal==fin){
                         fin=anterior;
                     }
+
                 }
 
             }
         }
-
-        return elemento;
     }
 
     // Buscar nodo
